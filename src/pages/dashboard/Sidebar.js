@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "@mdi/react";
-import { mdiCash,mdiChairRolling,mdiAccountMultipleOutline, mdiToolboxOutline } from "@mdi/js";
+import { mdiCash,mdiChairRolling,mdiAccountMultipleOutline, mdiToolboxOutline, mdiBug, mdiMessageProcessingOutline } from "@mdi/js";
 import axios from "axios";
 import {
   Card,
@@ -59,7 +59,7 @@ export default function Sidebar() {
             <ListItemPrefix>
               <Icon path={mdiAccountMultipleOutline} size={1} />
             </ListItemPrefix>
-            <Link className="hover:text-white" > Clients list </Link>
+            <Link className="hover:text-white" > Users list </Link>
           </ListItem>
         </Link>
 
@@ -90,6 +90,14 @@ export default function Sidebar() {
               <Icon path={mdiCash} size={1} />
             </ListItemPrefix>
             <Link className="hover:text-white" > Payments </Link>
+          </ListItem>
+        </Link>
+        <Link to="/ContactUs">
+          <ListItem className="hover:bg-[#064080] hover:text-white">
+            <ListItemPrefix>
+            <Icon path={mdiMessageProcessingOutline} size={1} />
+            </ListItemPrefix>
+            <Link className="hover:text-white" > ContactUs </Link>
           </ListItem>
         </Link>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "@mdi/react";
-import { mdiCash, mdiChairRolling, mdiChartBar, mdiToolboxOutline } from "@mdi/js";
+import { mdiBug, mdiCash, mdiChairRolling, mdiChartBar, mdiMessageProcessingOutline, mdiToolboxOutline } from "@mdi/js";
 import { mdiAccountMultipleOutline } from "@mdi/js";
 import "./dashboard.css";
 import axios from "axios";
@@ -153,7 +153,7 @@ const navListItems = [
     path: "/",
   },
   {
-    label: "Clients list",
+    label: "Users list",
     icon: mdiAccountMultipleOutline,
     path: "/ListUser",
   },
@@ -171,6 +171,11 @@ const navListItems = [
     label: "Payments",
     icon: mdiCash,
     path: "/Payment",
+  },
+  {
+    label: "ContactUs",
+    icon: mdiMessageProcessingOutline,
+    path: "/ContactUs",
   },
 ];
 
@@ -199,7 +204,7 @@ function NavList() {
 }
 
 export default function ComplexNavbar({ userIdApp0 }) {
-  console.log(userIdApp0);
+  // console.log(userIdApp0);
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [UserData, setUserData] = React.useState(null);
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
@@ -226,7 +231,7 @@ export default function ComplexNavbar({ userIdApp0 }) {
       () => window.innerWidth >= 960 && setIsNavOpen(false)
     );
   }, []);
-  console.log(UserData);
+  // console.log(UserData);
   return (
     <Navbar className=" sticky top-0 z-10 mx-auto max-w-screen p-2 bg-white rounded-full lg:pl-6 h-14 DashboardNav">
       <div className="relative mx-auto flex items-center text-blue-gray-900">

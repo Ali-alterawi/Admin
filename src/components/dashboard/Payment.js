@@ -1,5 +1,3 @@
-import { mdiDelete, mdiHumanEdit } from "@mdi/js";
-import Icon from "@mdi/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 

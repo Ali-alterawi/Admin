@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LogIn from "./pages/Login";
@@ -12,6 +12,7 @@ import axios from "axios";
 import ListOffice from "./components/dashboard/ListOffice";
 import Orders from "./components/dashboard/Orders";
 import Payment from "./components/dashboard/Payment";
+import ContactUs from "./components/dashboard/ContactUs";
 
 export default function App() {
   const [hideRouter1, setHideRouterUser] = useState(false);
@@ -31,7 +32,7 @@ export default function App() {
         });
         let x = [];
         setUserIdApp(response.data.user.id);
-        console.log(response.data.user);
+        // console.log(response.data.user);
         // console.log(response.data.user.id);
         if (response.data.user.role === 0) {
           x = [true, false, true];
@@ -85,6 +86,8 @@ export default function App() {
             <Route path="ListOffice" element={<ListOffice />} />
             <Route path="ListOrders" element={<Orders />} />
             <Route path="Payment" element={<Payment />} />
+            <Route path="ContactUs" element={<ContactUs />} />
+
           </Routes>
         </div>
       </Router>
